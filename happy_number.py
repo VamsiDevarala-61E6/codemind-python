@@ -7,10 +7,8 @@ def sq(n):
         n=n//10
     return p
 n=int(input())
-t=sq(n)
-f=0
-while(t!=0):
-    t=sq(t)
-    if t<10:
+while 1:
+    if n<10:
         break
-print(t==1 or t==2)
+    n=sq(n) 
+print(n==1 or n==7)
