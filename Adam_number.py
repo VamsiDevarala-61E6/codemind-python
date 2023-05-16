@@ -6,9 +6,6 @@ def rev(n):
     return r
 n=int(input())
 sq=n*n
-k=rev(n)
-v=k*k
-if rev(v)==sq:
-    print("True")
-else:
-    print("False")
+rn=rev(n)
+rsq=rn*rn
+print(rev(rsq)==sq)
