@@ -1,9 +1,8 @@
 n=int(input())
 a=0
 b=1
-print(a,b,end=' ')
-for i in range(1,n-1):
+for _ in range(n):
+    print(a,end=" ")
     c=a+b
-    print(c,end=' ')
     a=b
     b=c
