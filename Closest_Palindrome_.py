@@ -1,28 +1,26 @@
 def pali(n):
-    t=n
     r=0
+    t=n
     while(n!=0):
         r=r*10+n%10
         n=n//10
-    return t==r
+    return r==t
 n=int(input())
-i=n+1
-while(1):
-    if pali(i)==True:
-        fp=i
+fp=n+1
+bp=n-1
+while(True):
+    if pali(fp):
+        fp=fp
         break
-    i=i+1
-j=n-1
-while(1):
-    if pali(j)==True:
-        bp=j
+    fp=fp+1
+while(True):
+    if pali(bp):
+        bp=bp
         break
-    j=j-1
-if (fp-n)>(n-bp):
-    print(bp)
-elif (fp-n)==(n-bp):
-    print(bp,fp)
-else:
+    bp=bp-1
+if n-bp>fp-n:
     print(fp)
-    
-    
+elif n-bp<fp-n:
+    print(bp)
+else:
+    print(bp,fp)
