@@ -3,23 +3,24 @@ def prime(n):
     for i in range(2,(n//2)+1):
         if n%i==0:
             c+=1
+            break
     return c==0
 t=int(input())
 for _ in range(t):
     n=int(input())
-    fp=n
-    bp=n
+    i=n
+    j=n
     while(True):
-        if prime(fp):
-            f=fp
+        if prime(i):
+            fp=i
             break
-        fp=fp+1
+        i=i+1
     while(True):
-        if prime(bp):
-            b=bp
+        if prime(j):
+            bp=j
             break
-        bp=bp-1
-    if f-n<n-b:
-        print(f)
+        j=j-1
+    if n-bp>fp-n:
+        print(fp)
     else:
-        print(b)
+        print(bp)
