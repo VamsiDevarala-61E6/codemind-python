@@ -1,0 +1,14 @@
+n=int(input())
+l=list(map(int,input().split()))
+v=set(l)
+p=list(v)
+if(len(p)<3):
+    print(max(l))
+else:
+    #print(p)
+    k=3
+    while(k!=0):
+        m=max(p)
+        p.remove(m)
+        k=k-1
+    print(m)
